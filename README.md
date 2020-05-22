@@ -1,4 +1,4 @@
 Proiect Web Semantic
 
-Bogdan Iasinovschi
+Bogdan Iasinovschi |
 Alexandru Ungur
