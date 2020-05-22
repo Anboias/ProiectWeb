@@ -1,0 +1,178 @@
+{
+  "regiuni": [
+    {
+      "id": 1,
+      "zona": "Banat"
+    },
+    {
+      "id": 2,
+      "zona": "Moldova"
+    },
+    {
+      "id": 3,
+      "zona": "Dobrogea"
+    },
+    {
+      "id": 4,
+      "zona": "Crișana"
+    },
+    {
+      "id": 5,
+      "zona": "Oltenia"
+    },
+    {
+      "id": 6,
+      "zona": "Transilvania"
+    },
+    {
+      "id": 7,
+      "zona": "Muntenia"
+    }
+  ],
+  "judete": [
+    {
+      "id": 0,
+      "idZona": 1,
+      "nume": "Timiș",
+      "resedinta": "Timișoara",
+      "populatie": 683540,
+      "densitate": 78,
+      "suprafata": 8697,
+      "areStadion": true,
+      "indicatorAuto": "TM",
+      "imagineStema": "stemaTM.png",
+      "prefixTelefonic": "256/356",
+      "campAdaugat": ""
+    },
+    {
+      "id": 1,
+      "idZona": 2,
+      "nume": "Suceava",
+      "resedinta": "Suceava",
+      "populatie": 634810,
+      "densitate": 74,
+      "suprafata": 8553,
+      "areStadion": true,
+      "indicatorAuto": "SV",
+      "imagineStema": "stemaSV.png",
+      "prefixTelefonic": "230/330",
+      "campAdaugat": ""
+    },
+    {
+      "id": 2,
+      "idZona": 1,
+      "nume": "Caraș-Severin",
+      "resedinta": "Reșița",
+      "populatie": 295579,
+      "densitate": 35,
+      "suprafata": 8520,
+      "areStadion": false,
+      "indicatorAuto": "CS",
+      "imagineStema": "stemaCS.png",
+      "prefixTelefonic": "255/355",
+      "campAdaugat": ""
+    },
+    {
+      "id": 3,
+      "idZona": 3,
+      "nume": "Tulcea",
+      "resedinta": "Tulcea",
+      "populatie": 213083,
+      "densitate": 25,
+      "suprafata": 8499,
+      "areStadion": true,
+      "indicatorAuto": "TL",
+      "imagineStema": "stemaTL.png",
+      "prefixTelefonic": "240/340",
+      "campAdaugat": ""
+    },
+    {
+      "id": 4,
+      "idZona": 1,
+      "nume": "Arad",
+      "resedinta": "Arad",
+      "populatie": 430629,
+      "densitate": 56,
+      "suprafata": 7754,
+      "areStadion": true,
+      "indicatorAuto": "AR",
+      "imagineStema": "stemaAR.png",
+      "prefixTelefonic": "257/357",
+      "campAdaugat": ""
+    },
+    {
+      "id": 5,
+      "idZona": 4,
+      "nume": "Bihor",
+      "resedinta": "Oradea",
+      "populatie": 575398,
+      "densitate": 76,
+      "suprafata": 7544,
+      "areStadion": true,
+      "indicatorAuto": "BH",
+      "imagineStema": "stemaBH.png",
+      "prefixTelefonic": "259/359",
+      "campAdaugat": ""
+    },
+    {
+      "id": 6,
+      "idZona": 5,
+      "nume": "Dolj",
+      "resedinta": "Craiova",
+      "populatie": 660544,
+      "densitate": 89,
+      "suprafata": 7414,
+      "areStadion": false,
+      "indicatorAuto": "DJ",
+      "imagineStema": "stemaDJ.png",
+      "prefixTelefonic": "251/351",
+      "campAdaugat": ""
+    },
+    {
+      "id": 7,
+      "idZona": 3,
+      "nume": "Constanța",
+      "resedinta": "Constanța",
+      "populatie": 684082,
+      "densitate": 97,
+      "suprafata": 7071,
+      "areStadion": true,
+      "indicatorAuto": "CT",
+      "imagineStema": "stemaCT.png",
+      "prefixTelefonic": "241/341",
+      "campAdaugat": ""
+    },
+    {
+      "id": 8,
+      "idZona": 6,
+      "nume": "Hunedoara",
+      "resedinta": "Deva",
+      "populatie": 418565,
+      "densitate": 59,
+      "suprafata": 86977063,
+      "areStadion": true,
+      "indicatorAuto": "HD",
+      "imagineStema": "stemaHD.png",
+      "prefixTelefonic": "254/354",
+      "campAdaugat": ""
+    },
+    {
+      "id": 9,
+      "idZona": 7,
+      "nume": "Argeș",
+      "resedinta": "Pitești",
+      "populatie": 612431,
+      "densitate": 90,
+      "suprafata": 6826,
+      "areStadion": true,
+      "indicatorAuto": "AG",
+      "imagineStema": "stemaAG.png",
+      "prefixTelefonic": "248/348",
+      "campAdaugat": ""
+    }
+  ],
+  "info": {
+    "nume": "România",
+    "descriere": "Statistici top 10 județe după suprafață"
+  }
+}
