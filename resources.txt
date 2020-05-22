@@ -1,9 +1,10 @@
 brew install node (for npm and npx commands)
 
+Open terminal and go to the preferred location
 npx create-react-app project (will create new React project called project)
 
 Go to /project
-Copy all files from project.zip to /project (Overwrite)
+Copy all files from https://github.com/Anboias/ProiectWeb inside /project (Overwrite)
 
 npm install --save json-server
 json-server --watch infojudete.json
