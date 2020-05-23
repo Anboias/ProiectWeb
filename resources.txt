@@ -12,6 +12,8 @@ npm run json:server
 npm i -D json-server concurrently
 + made the modification in package.json under scripts to run both the app and the json-server concurrently
 
+Execute with:
+npm run dev (the command under scripts in package.json) 
 
 Materiale
 https://www.youtube.com/watch?v=1zkgdLZEdwM

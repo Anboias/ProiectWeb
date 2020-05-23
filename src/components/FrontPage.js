@@ -15,11 +15,12 @@ class FrontPage extends Component {
             denumire: '',
             valoare: '',
             idJudetLiber: 0,
+            afiseazaRegiune: false,
             fetchingDone: true,
             valueInserted: false
 
         }
-        this.arataRegiuni = this.arataRegiuni.bind(this);
+        this.afiseazaZonaRegiuni = this.afiseazaZonaRegiuni.bind(this);
         this.handleClickRegiuni = this.handleClickRegiuni.bind(this);
         this.stergeJudet = this.stergeJudet.bind(this);
         this.adaugaValoare = this.adaugaValoare.bind(this);
@@ -57,7 +58,7 @@ class FrontPage extends Component {
         .catch()
     }
 
-    arataRegiuni() {
+    afiseazaZonaRegiuni() {
         this.setState(prevState => ({
             afiseazaRegiune: !prevState.afiseazaRegiune,
             idJudet: -1
@@ -90,12 +91,16 @@ class FrontPage extends Component {
         })
     }
 
-    adaugaValoare = (event) => {
+    // parasireCasutaAdauga = () => {
+    //     window.location.reload(false)
+    // }
+
+    adaugaValoare = () => {
 
         const { regiuneCurenta, denumire, valoare, idJudetLiber} = this.state; 
 
         if (regiuneCurenta === -1) {
-            alert(regiuneCurenta);
+            alert('Alege o regiune!');
             return;
         }
 
@@ -156,16 +161,16 @@ class FrontPage extends Component {
                     </div>
                 </div>
 
-                <div className="row" style={butonAfiseazaRegiuni}>
+                <div className="row" style={butonAfiseazaZonaRegiuni}>
                     <button
                         type="button" 
                         className="btn btn-primary"
-                        onClick={this.arataRegiuni}
+                        onClick={this.afiseazaZonaRegiuni}
                     >Afișează regiuni</button>
                     <hr />
                 </div>
 
-                <div className="row" style={containerRegiuni}>
+                <div className="row" style={this.state.afiseazaRegiune ? containerRegiuni : hideContainerRegiuni}>
                     <div className="col-3" style={listaRegiuni}>
                         <div className="container shadow-lg p-3 mb-5 bg-white rounded post-summary" >
                             {this.state.afiseazaRegiune && 
@@ -294,6 +299,7 @@ class FrontPage extends Component {
                                 <div className="col-auto my-1" style={containerButonTrimitere} >
                                     <button   
                                         onMouseOver={this.adaugaValoare} 
+                                        // onMouseOut={this.parasireCasutaAdauga} 
                                         style={butonTrimitere} 
                                         className="btn btn-primary">Adaugă</button>
                                 </div>            
@@ -315,7 +321,7 @@ const rowOneStyle = {
     padding: "20px"
 }
 
-const butonAfiseazaRegiuni = {
+const butonAfiseazaZonaRegiuni = {
     padding: "20px",
 }
 
@@ -323,7 +329,11 @@ const containerRegiuni = {
     border: "1px solid lightgrey",
     minHeight: "500px",
     margin: "20px 0",
-    backgroundColor: "white"
+    backgroundColor: "white",
+    visibility: 'visible'
+}
+const hideContainerRegiuni = {
+    visibility: 'hidden'
 }
 
 const containerInserari = {
