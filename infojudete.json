@@ -169,6 +169,20 @@
       "imagineStema": "stemaAG.png",
       "prefixTelefonic": "248/348",
       "campAdaugat": ""
+    },
+    {
+      "id": 10,
+      "idZona": "1",
+      "nume": "",
+      "resedinta": "",
+      "populatie": 0,
+      "densitate": 0,
+      "suprafata": 0,
+      "areStadion": false,
+      "indicatorAuto": "",
+      "imagineStema": "placeholder.png",
+      "prefixTelefonic": "",
+      "campAdaugat": ""
     }
   ],
   "info": {

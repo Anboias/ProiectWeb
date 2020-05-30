@@ -1,4 +1,7 @@
+import * as Styles from './Styles';
+
 import React, { Component } from 'react';
+import DetaliiJudet from './DetaliiJudet';
 const images = require.context('../img', true);
 
 class FrontPage extends Component {
@@ -147,11 +150,10 @@ class FrontPage extends Component {
 
         const { regiuni, judete, info, idJudet } = this.state;
 
-        console.log("IDJudet: " + idJudet)
         return (
-            <div className="container" style={containerTitlu}>
+            <div className="container" style={Styles.containerTitlu}>
 
-                <div className="row" style={rowOneStyle}>
+                <div className="row" style={Styles.rowOneStyle}>
                     <div className="col">
                         <div>
                             <br />
@@ -161,7 +163,7 @@ class FrontPage extends Component {
                     </div>
                 </div>
 
-                <div className="row" style={butonAfiseazaZonaRegiuni}>
+                <div className="row" style={Styles.butonAfiseazaZonaRegiuni}>
                     <button
                         type="button" 
                         className="btn btn-primary"
@@ -170,8 +172,8 @@ class FrontPage extends Component {
                     <hr />
                 </div>
 
-                <div className="row" style={this.state.afiseazaRegiune ? containerRegiuni : hideContainerRegiuni}>
-                    <div className="col-3" style={listaRegiuni}>
+                <div className="row" style={this.state.afiseazaRegiune ? Styles.containerRegiuni : Styles.hideContainerRegiuni}>
+                    <div className="col-3" style={Styles.listaRegiuni}>
                         <div className="container shadow-lg p-3 mb-5 bg-white rounded post-summary" >
                             {this.state.afiseazaRegiune && 
                                 <div className="list-group">
@@ -193,7 +195,7 @@ class FrontPage extends Component {
 
 
                     {
-                        this.state.fetchingDone && <div className="col-9" style={containerJudete}>
+                        this.state.fetchingDone && <div className="col-9" style={Styles.containerJudete}>
                             <div className="container shadow-lg p-3 mb-5 bg-white rounded post-summary" >
                                 <div className="list-group">
 
@@ -204,12 +206,12 @@ class FrontPage extends Component {
                                         if (judet.idZona == idJudet) {
                                                 return ( 
                                                     <div className="container" key={judet.id} >
-                                                        <div className="row" style={listGroupStyle}>
+                                                        <div className="row" style={Styles.listGroupStyle}>
                                                             <div className="col-4">
                                                                 <h3>{judet.nume}</h3> 
-                                                                <img src={imagineCurenta} alt="" style={imgStyle}/>
+                                                                <img src={imagineCurenta} alt="" style={Styles.imgStyle}/>
                                                                 <button 
-                                                                    style={buttonDeleteStyle}
+                                                                    style={Styles.buttonDeleteStyle}
                                                                     id={judet.id} 
                                                                     type="button" 
                                                                     className="btn btn-danger"
@@ -217,44 +219,7 @@ class FrontPage extends Component {
                                                                 >Stergere
                                                                 </button> 
                                                             </div>
-                                                            <div className="col-8" style={detaliiJudet}>
-                                                                <table className="table table-hover">
-                                                                    <tbody>
-                                                                        {isOldField ? <tr>
-                                                                            <th>Reședință</th>
-                                                                            <td>{judet.resedinta}</td>
-                                                                        </tr> : null}
-                                                                        {isOldField ? <tr>
-                                                                            <th>Populație</th>
-                                                                            <td>{judet.populatie}</td>
-                                                                        </tr> : null}
-                                                                        {isOldField ? <tr>
-                                                                            <th>Densitate</th>
-                                                                            <td>{judet.densitate}</td>
-                                                                        </tr> : null}
-                                                                        {isOldField ? <tr>
-                                                                            <th>Stadion</th>
-                                                                            <td>{judet.areStadion ? 'Da' : 'Nu'}</td>
-                                                                        </tr> : null}
-                                                                        {isOldField ? <tr>
-                                                                            <th>Suprafață</th>
-                                                                            <td>{judet.suprafata}</td>
-                                                                        </tr> : null}
-                                                                        {isOldField ? <tr>
-                                                                            <th>Indicator Auto</th>
-                                                                            <td>{judet.indicatorAuto}</td>
-                                                                        </tr> : null}
-                                                                        {isOldField ? <tr>
-                                                                            <th>Prefix Telefonic</th>
-                                                                            <td>{judet.prefixTelefonic}</td>
-                                                                        </tr> : null}
-                                                                        {!isOldField ? <tr>
-                                                                            <th>Camp adaugat</th>
-                                                                            <td>{judet.campAdaugat}</td>
-                                                                        </tr> : null}
-                                                                    </tbody>
-                                                                </table>
-                                                            </div>
+                                                            <DetaliiJudet isOldField={isOldField} detaliiJudet={Styles.detaliiJudet} judet={judet} />
                                                         </div>
                                                         <hr />
                                                     </div>
@@ -269,14 +234,14 @@ class FrontPage extends Component {
                     }
                 </div>
 
-                <div className="row" style={containerInserari}>
+                <div className="row" style={Styles.containerInserari}>
                     <div className="col">
                         <div className="credentials-form" >
                             <h1 className="">Inserare valori</h1>
                             <hr />
                             <form className="form-row align-items-center">
 
-                                <div className="col-sm-4 my-1" style={formInserare} >
+                                <div className="col-sm-4 my-1" style={Styles.formInserare} >
                                     <label htmlFor="denumire">Denumire</label>
                                     <input
                                         type="text"
@@ -286,7 +251,7 @@ class FrontPage extends Component {
                                         required
                                     />
                                 </div>   
-                                <div className="col-sm-4 my-1" style={formInserare} >
+                                <div className="col-sm-4 my-1" style={Styles.formInserare} >
                                     <label htmlFor="valoare">Valoare</label>
                                     <input
                                         type="text"
@@ -296,11 +261,11 @@ class FrontPage extends Component {
                                         required
                                     />
                                 </div>        
-                                <div className="col-auto my-1" style={containerButonTrimitere} >
+                                <div className="col-auto my-1" style={Styles.containerButonTrimitere} >
                                     <button   
                                         onMouseOver={this.adaugaValoare} 
                                         // onMouseOut={this.parasireCasutaAdauga} 
-                                        style={butonTrimitere} 
+                                        style={Styles.butonTrimitere} 
                                         className="btn btn-primary">Adaugă</button>
                                 </div>            
                             </form>
@@ -313,77 +278,5 @@ class FrontPage extends Component {
     }
 }
 
-const containerTitlu = {
-    margin: "0 auto",
-}
-
-const rowOneStyle = {
-    padding: "20px"
-}
-
-const butonAfiseazaZonaRegiuni = {
-    padding: "20px",
-}
-
-const containerRegiuni = {
-    border: "1px solid lightgrey",
-    minHeight: "500px",
-    margin: "20px 0",
-    backgroundColor: "white",
-    visibility: 'visible'
-}
-const hideContainerRegiuni = {
-    visibility: 'hidden'
-}
-
-const containerInserari = {
-    border: "1px solid lightgrey",
-    minHeight: "100px",
-    margin: "20px 0",
-    backgroundColor: "white"
-}
-
-const listaRegiuni = {
-    padding: "20px",
-}
-
-const containerJudete = {
-    padding: "20px",
-}
-
-const detaliiJudet = {
-    paddingLeft: "30px",
-}
-
-const imgStyle = {
-    width: "100px",
-    height: "100px",
-    // margin: "50px 0"
-}
-
-const buttonDeleteStyle = {
-    width: 100,
-    bottom: 0,
-    left: "10px",
-    position: "absolute",
-    margin: "20px 0"
-}
-
-const butonTrimitere = {
-    padding: "25px",
-    marginLeft: "50px"
-}
-
-const containerButonTrimitere = {
-    marginRight: "0"
-}
-
-const formInserare = {
-    padding: "10px"
-}
-
-const listGroupStyle = {
-    height: "350px"
-}
 
 export default FrontPage
